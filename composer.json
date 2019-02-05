@@ -1,0 +1,54 @@
+{
+    "name": "danielebarbaro/laravel-env-display",
+    "description": "A simple package to display and check env variables",
+    "keywords": [
+        "danielebarbaro",
+        "laravel-env-display"
+    ],
+    "homepage": "https://github.com/danielebarbaro/laravel-env-display",
+    "license": "MIT License (MIT)",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Daniele Barbaro",
+            "email": "barbaro.daniele@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "5.7.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.7.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Danielebarbaro\\LaravelEnvDisplay\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Danielebarbaro\\LaravelEnvDisplay\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Danielebarbaro\\LaravelEnvDisplay\\LaravelEnvDisplayServiceProvider"
+            ],
+            "aliases": {
+                "LaravelEnvDisplay": "Danielebarbaro\\LaravelEnvDisplay\\LaravelEnvDisplayFacade"
+            }
+        }
+    }
+}
